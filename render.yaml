@@ -1,0 +1,38 @@
+# render.yaml — Infrastructure as Code pour Render.com
+# Auteur    : Karl Bifu Batunguni
+# Copyright : (c) 2026 Bifu Albert Bank
+
+services:
+  # === API FastAPI ===
+  - type: web
+    name: scoring-api
+    runtime: python
+    plan: free
+    region: frankfurt  # ou oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.main_v2:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: SECRET_KEY
+        generateValue: true  # Render génère une clé aléatoire
+      - key: DATABASE_URL
+        value: sqlite:///./scoring_audit.db
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: 60
+    disk:
+      name: scoring-data
+      mountPath: /app/data
+      sizeGB: 1
+
+  # === Frontend Streamlit ===
+  - type: web
+    name: scoring-frontend
+    runtime: python
+    plan: free
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app_v2.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: API_URL
+        value: https://scoring-api.onrender.com  # ← URL de votre API après déploiement

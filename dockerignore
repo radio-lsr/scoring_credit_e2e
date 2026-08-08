@@ -1,0 +1,23 @@
+# =============================================================================
+#  Docker Ignore — Scoring Credit v2.0
+#  Copyright : (c) 2026 Banque Centrale
+# =============================================================================
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.git/
+.gitignore
+.env
+notebooks/*.png
+notebooks/*.ipynb
+.pytest_cache/
+.coverage
+htmlcov/

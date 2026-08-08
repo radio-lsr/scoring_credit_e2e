@@ -180,4 +180,4 @@ Applications réelles :
 
 ---
 
-*Projet généré dans le cadre du cours Data Analyse — 2026*
+*Projet implémenté dans le cadre du cours Data Analyse — 2026*

@@ -1,5 +1,5 @@
 """
-Application Web de Scoring de Credit — Banque Centrale v2.0
+Application Web de Scoring de Credit — Bifu Albert Bank v2.0
 Interface Streamlit pour consommer l'API de prediction
 """
 import streamlit as st
@@ -7,14 +7,14 @@ import requests
 import pandas as pd
 
 st.set_page_config(
-    page_title="Scoring Credit — Banque Centrale",
+    page_title="Scoring Credit — Bifu Albert Bank",
     page_icon="🏦",
     layout="wide"
 )
 
 API_URL = st.sidebar.text_input("URL de l'API", value="http://localhost:8000")
 
-st.title("🏦 Scoring de Credit — Banque Centrale")
+st.title("🏦 Scoring de Credit — Bifu Albert Bank")
 st.markdown("*Evaluation du risque de defaut en temps reel*")
 
 st.sidebar.header("📊 Informations")

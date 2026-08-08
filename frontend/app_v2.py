@@ -7,7 +7,7 @@
 #  Version     : 2.0.0
 #  Licence     : MIT
 #
-#  Copyright (c) 2026 Banque Centrale. Tous droits reserves.
+#  Copyright (c) 2026 Bifu Albert Bank. Tous droits reserves.
 # =============================================================================
 import streamlit as st
 import requests

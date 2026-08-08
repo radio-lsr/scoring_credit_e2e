@@ -35,4 +35,4 @@ services:
     startCommand: streamlit run app_v2.py --server.port $PORT --server.address 0.0.0.0
     envVars:
       - key: API_URL
-        value: https://scoring-api.onrender.com  # ← URL de votre API après déploiement
+        value: https://scoring-credit-e2e.onrender.com  # ← URL de votre API après déploiement

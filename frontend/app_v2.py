@@ -20,7 +20,7 @@ st.set_page_config(
     layout="wide"
 )
 
-API_URL = st.sidebar.text_input("URL API", value="http://localhost:8000")
+API_URL = st.sidebar.text_input("URL API", value="https://scoring-credit-e2e.onrender.com")
 
 # ─── AUTH ───────────────────────────────────────────────────
 if "token" not in st.session_state:

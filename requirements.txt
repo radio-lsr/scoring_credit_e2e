@@ -41,8 +41,8 @@ requests==2.32.3
 matplotlib==3.9.0
 seaborn==0.13.2
 
-# Monitoring & Drift
-evidently==0.4.0
+# Monitoring & Drift (Compatible Pydantic v2)
+evidently>=0.4.27
 
 # Tests & Qualite
 pytest==8.3.2
